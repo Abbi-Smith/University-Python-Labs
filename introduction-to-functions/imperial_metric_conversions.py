@@ -1,6 +1,6 @@
 # Function converting from imperial to metric
 def imperialToMetric(stones, pounds):
-    kg = (stones*14 + pounds)/2.2
+    kg = round((stones*14 + pounds)/2.2, 1)
     return kg 
 
 # Get user input for stones and pounds
@@ -10,8 +10,8 @@ print(imperialToMetric(stones, pounds))
 
 # Function converting from metric to imperial
 def metricToImperial(kilograms):
-    st = (kilograms*2.2)//14
-    lbs = (kilograms*2.2)%14
+    st = round((kilograms*2.2)//14, 0)
+    lbs = round((kilograms*2.2)%14, 0)
     return st, lbs
 
 # Get user input for kilograms
